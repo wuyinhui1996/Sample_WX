@@ -1,0 +1,212 @@
+page,.page {
+  height: 100%;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+}
+.page-bottom{
+  /* height: 100%; */
+  width: 750rpx;
+  position: fixed; 
+  background-color:white;
+  z-index: 0;
+}
+.wc{
+  width: 500rpx;
+  color: rgb(82, 76, 76);
+  padding: 30rpx 0 30rpx 40rpx;
+}
+/* .page-content{
+  padding-top: 300rpx;
+} */
+.page-top{
+  height: 100%;
+  position: fixed;
+  width: 750rpx;
+  background-color: rgb(246, 247, 250);
+  z-index: 0;
+  transition: All 0.4s ease; 
+  -webkit-transition: All 0.4s ease;
+}
+.page-top image{
+  position: absolute;
+  width: 68rpx;
+  height: 38rpx;
+  left: 20rpx;
+  top: 20rpx;
+}
+/* .page-text{
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+} */
+.name{
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  font-size: 30px;
+  margin-top: 15px;
+  text-align:center;
+}
+
+.content{
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  word-break: break-all;
+  /* height: 100%; */
+
+
+
+}
+/* .c-state1{
+  transform: rotate(0deg) scale(1) translate(75%,0%); 
+  -webkit-transform: rotate(0deg) scale(1) translate(75%,0%); 
+}
+.c-state2{
+  transform: rotate(0deg) scale(.8) translate(75%,0%); 
+  -webkit-transform: rotate(0deg) scale(.8) translate(75%,0%); 
+} */
+
+.userinfo {
+  height: 180px;
+  background-color: rgb(192, 189, 189);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;  */
+}
+.page-item{
+  background-color:white;
+  margin-top: 15px;
+  margin-left: 8px;
+}
+
+.userinfo-avatar {
+  margin-top: 60px;
+  margin-left: 110px;
+  width: 128rpx;
+  height: 128rpx;
+  /* margin: 20rpx; */
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  margin-left: 119px;
+  color: rgb(82, 76, 76);
+}
+
+
+
+/* 顶部要固定定位   标题要居中   自定义按钮和标题要和右边微信原生的胶囊上下对齐 */
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  color: #000;
+  z-index: 9999999;
+}
+/* 标题要居中 */
+.nav-title {
+  position: absolute;
+  text-align: center;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 36rpx;
+  color: #2c2b2b;
+  font-weight: 600;
+}
+
+.titlebar{
+  position: fixed;
+  width: 100%;
+  margin-top: 20px;
+  height: 60px;
+  background: #fff;
+  color: #000;
+  z-index: 9999999;
+
+}
+
+.nav-capsule {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  width: 140rpx;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar-v-line {
+  position: fixed;
+  width: 1px;
+  height: 38rpx;
+  background-color: #e5e5e5;
+  margin-top: 40rpx;
+  left: 0;
+  margin-left: 45px;
+  
+}
+
+.back {
+  position: fixed;
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 25rpx;
+  /* padding: 10rpx; */
+}
+.more {
+  position: fixed;
+  width: 32rpx;
+  height: 36rpx;
+  margin-top: 25rpx;
+   /* padding: 10rpx;  */
+  left: 0;
+  margin-left: 60px;
+}
+/* .nav-capsule .more {
+  width: 36rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+} */
+.home-page {
+  position: fixed;
+  text-align: center;
+  /* max-width: 340rpx; */
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 22px;
+  margin-left: 80px;
+  margin-right: 100px;
+  /* margin: auto; */
+ 
+  color: #2c2b2b;
+ font-weight: 600;
+  height: 100rpx;
+
+   font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  word-break: break-all;
+
+}
+.scroll-view-item{
+ height: 100%;
+}
+
+
+

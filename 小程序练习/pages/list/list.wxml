@@ -1,0 +1,51 @@
+<view class='bar' style='height:80px' >
+  <view class='nav-wrap' style='height: {{height*2 + 24}}px;'>
+    <!-- // 导航栏 中间的标题 -->
+    <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view>
+    <!-- <view style='display: flex; justify-content: space-around;flex-direction: column '> -->
+  </view>
+  <view class='titlebar'>
+    <!-- // 导航栏  左上角的返回按钮 和home按钮
+      //  其中wx:if='{{navbarData.showCapsule}}' 是控制左上角按钮的显示隐藏，首页不显示 -->
+      <!-- <view class='nav-capsule' style='height: {{height*2 + 20}}px;' wx:if='{{navbarData.showCapsule}}'> -->
+       <!-- //左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示
+       //从分享进入小程序时 返回上一级按钮不应该存在 -->
+       <!-- <view bindtap='_navback' wx:if='{{!share}}'>
+        <image src='/images/back.png' mode='aspectFill' class='back'></image>
+       </view> -->
+       <!-- <view class='navbar-v-line' wx:if='{{!share}}'></view>
+       <view bindtap='tap_ch'>
+        <image src='/images/more.png' mode='aspectFill' class='more'></image>
+       </view> -->
+       
+     <!-- </view> -->
+     <view class='home-page' mode='aspectFill' >心肺功能检测详情</view>
+  </view>
+      
+   <!-- </view> -->
+  
+  
+</view>
+
+
+
+<view class="container list-container"> 
+    <view class="list-item" wx:for="{{contactList}}"> 
+      <image class="left"    src="/images/a.png"></image> 
+      <view class="right"> 
+        <view class="title"> 
+          <view class="name">{{item.name}}</view> 
+          <view class="phone">{{item.phone}}</view> 
+        </view> 
+       <view class="time">{{item.time}}</view> 
+      </view> 
+    </view> 
+</view> 
+
+<view wx:for="{{words}}" wx:key="{{item.viewid}}">
+    <navigator url="../details/details?index={{item.viewid}}">
+        <view class="item-style">{{item.name}}</view>
+    </navigator>
+</view>
+
+

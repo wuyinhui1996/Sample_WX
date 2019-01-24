@@ -1,0 +1,58 @@
+{
+  "pages":[
+    "pages/question/question",
+    "pages/help/help",
+    "pages/details/details",
+   
+    "pages/login/login",
+    "pages/list/list",
+    
+    "pages/test/test",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+ 
+   
+
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+   
+    "backgroundColor":"#d9d9d9",
+    "navigationStyle": "custom"
+  },
+
+  "tabBar":{
+    "color": "#a9b7b8",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list":[
+      {
+        "selectedIconPath": "images/home1.png",
+        "iconPath": "images/home.png",
+        "pagePath":"pages/list/list",
+        "text":"主页"
+      },
+      {
+        "selectedIconPath": "images/help1.png",
+        "iconPath": "images/help.png",
+        "pagePath": "pages/help/help",
+        "text": "帮助"
+      }
+      
+    ]
+  },
+
+
+
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
