@@ -51,18 +51,18 @@ Page({
     // }
   },
 
-  how_find: function () {
-    console.log("这是如何找到小程序");
+  question: function () {
+    console.log("这是question");
 
   },
 
-  how_login: function () {
-    console.log("这是如何登录小程序");
+  feedback: function () {
+    console.log("这是feedback");
 
   },
 
-  how_delete: function () {
-    console.log("这是如何删除小程序");
+  about_us: function () {
+    console.log("这是about_us");
 
   },
 

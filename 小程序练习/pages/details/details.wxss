@@ -10,9 +10,18 @@ page,.page {
   z-index: 0;
 }
 .wc{
+  background-color: white;
   width: 500rpx;
   color: rgb(82, 76, 76);
-  padding: 30rpx 0 30rpx 40rpx;
+  /* padding: 30rpx 0 30rpx 40rpx; */
+  margin-left: 10px;
+  /* border: none; */
+  border-radius: 0;
+  margin-top: 10px;
+}
+
+.wc::after {
+  border: 0;
 }
 /* .page-content{
   padding-top: 300rpx;
@@ -49,7 +58,7 @@ page,.page {
 
 .content{
   font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;

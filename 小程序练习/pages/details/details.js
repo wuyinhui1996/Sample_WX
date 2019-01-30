@@ -1,9 +1,15 @@
 const app = getApp();
 var util=require('../../utils/util.js');
 
+
 Page({
   data: {
     // statusBarHeight: app.globalData.statusBarHeight,
+
+    // motto: 'Hello World',
+    text:'',
+ 
+
 
  
     userInfo: {},
@@ -59,10 +65,23 @@ Page({
     })
   },
   onLoad: function () {
+
+
+    // const http = require('../../utils/http.js')//引入http.js文件
+    // var params = { start: 1, count: 4 }; //参数
+    // http.post("http://health.ia.ac.cn:5007/checklistBicycleData/getChecklistBicycleDataByAt?listId=13985", { start: 1, count: 4 }, function (res) {
+    //   console.log("返回结果=" + JSON.stringify(res.data));
+    // }, function (e) {
+    //   console.log("返回error结果=" + JSON.stringify(e));
+    // });
+    
+
+
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        hasUserInfo: true,
       })
     } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -85,6 +104,8 @@ Page({
         }
       })
     }
+
+   
     
   },
   // getUserInfo: function (e) {
@@ -221,12 +242,85 @@ Page({
     this.data.newmark = 0;
   },
  CEPT_Report:function(){
-    console.log("这是CEPT Report");
-  
+    var self = this;
+    
+  //  this.setData({
+  //   //  motto:"你好世界",
+  //   text:"这是CEPT"
+     
+  //  }) 
+  //   //console.log("这是CEPT Report");
+
+
+   wx.request({
+     url: "http://health.ia.ac.cn:5007/checklist/getChecklistByListId?listId=13985",
+     method: "POST",
+     data: {
+       text:'',
+       result:'',
+       msg:'',
+       data:'',
+       length:'',
+       msgCode:''
+
+     },
+     header: {
+       "Content-Type": "application/x-www-form-urlencoded"
+     },
+
+     success: function (res) {
+       
+       console.log(res.data);
+
+     
+     
+      self.setData({
+       
+        text: res.data.result,
+        result:res.data.result,
+        msg:res.data.msg,
+        data: res.data.data.RESTING_PFT,
+        length:res.data.length,
+        msgCode:res.data.msgCode
+
+        
+        //text: res.data.at
+      })
+
+
+
+
+      //  wx.showToast({
+      //    title: '成功！',
+      //    icon: 'success',
+      //    duration: 2000
+      //  })
+       
+     },
+     fail:function(err){}
+    
+
+
+   })
+   
  },
+
+
+     
+    
+     
+
+ 
+  
+
+
+
+ 
   // CEPT: function (options) {
-  //   var that = this;
-  //   that.tap_start();
+
+  //   console.log("判断是否滑动" + util.tap_start(s));
+  //   // var that =  this;
+  //   // that.tap_start();
 
   // },
   // queryCartList: function () {
@@ -234,19 +328,139 @@ Page({
   // }
 
   AT_Report: function () {
-    console.log("这是AT Report");
+    // this.setData({
+    //   text:"这是AT"
+    // })
+    //  console.log("这是AT Report");
 
+    
+    var self = this;
+    wx.request({
+      url: "http://health.ia.ac.cn:5007/checklistBicycleData/getChecklistBicycleDataByAt?listId=13985",
+      method: "POST",
+      data: {
+        text: ''
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+
+      success: function (res) {
+        console.log(res.data);
+        self.setData({
+          text: res.data.msgCode
+          //text: res.data.at
+        })
+        //  wx.showToast({
+        //    title: '成功！',
+        //    icon: 'success',
+        //    duration: 2000
+        //  })
+
+      },
+      fail: function (err) { }
+    })
   },
   Panel_Report: function () {
-    console.log("这是9_Panel Report");
+    // this.setData({
+    //   text: "这是9 Panel"
+    // })
+    //  console.log("这是9_Panel Report");
 
+    var self = this;
+    wx.request({
+      url: "http://health.ia.ac.cn:5007/checklistBicycleData/getChecklistBicycleDataByListId?listId=13985",
+      method: "POST",
+      data: {
+        text: ''
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+
+      success: function (res) {
+        console.log(res.data);
+        self.setData({
+          text: res.data.msg
+          //text: res.data.at
+        })
+        //  wx.showToast({
+        //    title: '成功！',
+        //    icon: 'success',
+        //    duration: 2000
+        //  })
+
+      },
+      fail: function (err) { }
+    })
   },
-  Ecg_Data: function () {
-    console.log("这是Ecg_Data");
 
+  
+  Ecg_Data: function () {
+    // this.setData({
+    //   text: "这是Ecg Data"
+    // })
+    // console.log("这是Ecg_Data");
+
+    var self = this;
+    wx.request({
+      url: "http://health.ia.ac.cn:5007/file/getFilesByListId?listId=13985",
+      method: "POST",
+      data: {
+        text: ''
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+
+      success: function (res) {
+        console.log(res.data);
+        self.setData({
+          text: res.data.msgCode
+          //text: res.data.at
+        })
+        //  wx.showToast({
+        //    title: '成功！',
+        //    icon: 'success',
+        //    duration: 2000
+        //  })
+
+      },
+      fail: function (err) { }
+    })
   },
   Table_Data: function () {
-    console.log("这是Table_Data");
+    // this.setData({
+    //   text: "这是Table Data"
+    // })
+    // console.log("这是Table_Data");
+
+    var self = this;
+    wx.request({
+      url: "http://health.ia.ac.cn:5007/file/getFilesByListId?listId=13985",
+      method: "POST",
+      data: {
+        text: ''
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+
+      success: function (res) {
+        console.log(res.data);
+        self.setData({
+          text: res.data.msg
+          //text: res.data.at
+        })
+        //  wx.showToast({
+        //    title: '成功！',
+        //    icon: 'success',
+        //    duration: 2000
+        //  })
+
+      },
+      fail: function (err) { }
+    })
 
   }
 
