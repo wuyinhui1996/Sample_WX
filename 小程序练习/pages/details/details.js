@@ -256,12 +256,26 @@ Page({
      url: "http://health.ia.ac.cn:5007/checklist/getChecklistByListId?listId=13985",
      method: "POST",
      data: {
-       text:'',
-       result:'',
-       msg:'',
-       data:'',
-       length:'',
-       msgCode:''
+       LIST_ID:'',
+       INSTRUMENTS_ID:'',
+       PATIENT_NAME:'',
+       CHECK_DATE:'',
+       INPATIENT_AREA:'',
+       BIRTHDAY:'',
+       AGE:'',
+       INPATIENT_ID:'',
+       PATIENT_SEX:'',
+       START_TIME:'',
+       HEIGHT:'',
+       DURATION:'',
+       WEIGHT:'',
+       PROTOCOL:'',
+       BMI:'',
+       DIAGNOSIS:'',
+       RS:'',
+
+
+    
 
      },
      header: {
@@ -275,16 +289,25 @@ Page({
      
      
       self.setData({
-       
-        text: res.data.result,
-        result:res.data.result,
-        msg:res.data.msg,
-        data: res.data.data.RESTING_PFT,
-        length:res.data.length,
-        msgCode:res.data.msgCode
-
-        
-        //text: res.data.at
+        LIST_ID: res.data.data.LIST_ID,
+        INSTRUMENTS_ID: res.data.data.INSTRUMENTS_ID,
+        PATIENT_NAME: res.data.data.PATIENT_NAME,
+        CHECK_DATE: res.data.data.CHECK_DATE,
+        CHECK_DATE: res.data.data.CHECK_DATE,
+        INPATIENT_AREA: res.data.data.INPATIENT_AREA,
+        BIRTHDAY: res.data.data.BIRTHDAY,
+        AGE: res.data.data.AGE,
+        INPATIENT_ID: res.data.data.INPATIENT_ID,
+        PATIENT_SEX: res.data.data.PATIENT_SEX,
+        START_TIME: res.data.data.START_TIME,
+        HEIGHT: res.data.data.HEIGHT,
+        DURATION: res.data.data.DURATION,
+        WEIGHT: res.data.data.WEIGHT,
+        PROTOCOL: res.data.data.PROTOCOL,
+        BMI: res.data.data.BMI,
+        DIAGNOSIS: res.data.data.DIAGNOSIS,
+        RS: res.data.data.RS
+      
       })
 
 

@@ -1,6 +1,13 @@
 {
   "pages":[
+    "pages/table/table",
     "pages/details/details",
+    "pages/list/list",
+    "pages/login/login",
+    
+    
+    
+    
     "pages/feedback/feedback",
     "pages/answer3/answer3",
     "pages/answer2/answer2",
@@ -11,8 +18,8 @@
     "pages/question/question",
     "pages/help/help",
     
-    "pages/list/list",
-    "pages/login/login",
+  
+   
     
    
     "pages/about_us/about_us",
@@ -26,7 +33,7 @@
    
  
     
-    "pages/test/test",
+    
     "pages/index/index",
     "pages/logs/logs"
   ],
