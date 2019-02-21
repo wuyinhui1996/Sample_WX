@@ -115,14 +115,13 @@
   /* display: flex; 
   align-items: center; */
 }
-
 .item{
   height: 40px;
     display: flex;
-  flex-direction: column;
-  justify-content: center;
+   flex-direction: row;
+  justify-content: left;
   margin-left: 20px;
-  
+    align-items: center;
 }
 
 /*分割线样式*/
@@ -131,3 +130,8 @@
  width: 100%;
  height: 3rpx;
 }
+.left{  
+  width: 50rpx;  
+  height:50rpx;  
+  margin-right: 8px;
+} 

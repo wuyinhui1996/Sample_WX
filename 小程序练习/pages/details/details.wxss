@@ -228,5 +228,272 @@ page,.page {
 
 
 
+.table1 {
+   border-bottom: 1rpx solid #555; 
+  position: absolute;
+  top: 570px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 96%;
+  font-size: 14px;
+}
+ 
+.tr {
+  display: flex;
+  width: 100%;
+  
+  border-top: 1rpx solid #555;
+  border-left: 1rpx solid #555;
+  color: #555;
+  box-sizing: border-box;
+}
+/* .tr_title1{
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  border-right: 1rpx solid #555;
+
+} */
+.td {
+  width: 25%;
+  justify-content: center;
+  text-align: center;
+  border-right: 1rpx solid #555;
+  /* padding: 20rpx 0; */
+  flex-direction: column;
+}
+.tdd1{
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  border-right: 1rpx solid #555;
+  /* padding: 20rpx 0; */
+  /* flex-direction: column; */
+}
+.tdd1_row{
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* text-align: center; */
+  align-content: center;
+  vertical-align: center;
+  border-bottom: 1rpx solid #555;
+}
+.tdd1_row1{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* text-align: center; */
+  align-content: center;
+  vertical-align: center;
+  border-bottom: 1rpx solid #555;
+}
+.tdd1_row_num{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  border-right: 1rpx solid #555;
+
+ 
+ 
+  align-items: center;
+}
+
+.td_ch{
+   justify-content: center;
+   display: flex;
+   align-items: center;
+  margin-top: 50rpx; 
+}
+td_ch1{
+   justify-content: center;
+   display: flex;
+   align-items: center;
+  margin-top: 100rpx; 
+}
+.td.en{
+    justify-content: center;
+  display: flex;
+  /* height: 2rem; */
+  align-items: center;
+ 
+
+}
+ 
+.th {
+   width: 25%;
+  justify-content: center;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  color: #555;
+  border-right: 1rpx solid #555;
+  flex-direction: column;
+}
+.th_ch{
+  /* width: 50%; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.th_en{
+  /* width: 50%; */
+  justify-content: center;
+  display: flex;
+  /* height: 2rem; */
+  align-items: center;
+
+}
+.th1{
+   width: 50%;
+  justify-content: center;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  color: #555;
+  border-right: 1rpx solid #555;
+ 
+  flex-direction: column;
+}
+.th1_ch{
+  justify-content: center;
+  display: flex;
+  /* height: 2rem; */
+  align-items: center;
+}
+.th1_en{
+  justify-content: center;
+  display: flex;
+  /* height: 2rem; */
+  align-items: center;
+}
+ 
+/* .td_center {
+  display: flex;
+  align-items: center;
+} */
+ 
+.tdd2 {
+  border-bottom: 1px solid #333;
+  padding: 10px;
+}
+ 
+/* .width1 {
+  width: 20%;
+}
+ 
+.width2 {
+  width: 30%;
+} */
+ 
+.bg-g {
+  background: #e6f3f9;
+}
+ 
+.border-none {
+  border: none;
+}
 
 
+
+.table2 {
+   border-bottom: 1rpx solid #555; 
+  position: absolute;
+  top: 860px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 96%;
+  font-size: 14px;
+}
+
+
+.table3 {
+   border-bottom: 1rpx solid #555; 
+  position: absolute;
+  top: 1350px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 96%;
+  font-size: 14px;
+}
+.th2{
+   width: 40%;
+  justify-content: center;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  color: #555;
+  border-right: 1rpx solid #555;
+ 
+  flex-direction: column;
+}
+.th3{
+     width: 20%;
+  justify-content: center;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  color: #555;
+  border-right: 1rpx solid #555;
+  flex-direction: column;
+}
+.th4{
+     width: 20%;
+  justify-content: center;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  color: #555;
+  border-right: 1rpx solid #555;
+  flex-direction: column;
+}
+.th5{
+     width: 20%;
+  justify-content: center;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  color: #555;
+  border-right: 1rpx solid #555;
+  flex-direction: column;
+}
+
+
+.page_analysis{
+  margin-top:  1300px;
+   font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+   font-size: 24px;
+}
+.page_analysis_item{
+  margin-top: 10px;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+   
+}
+.item_title{
+  margin-top: 10px;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+   font-size: 20px;
+  
+}
+.item_text{
+   margin-top: 10px;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+   font-size: 16px;
+   border: 1rpx solid #555;
+}
+.item_name{
+   margin-top: 10px;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+   font-size: 16px;
+    display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  flex-wrap: wrap;
+}

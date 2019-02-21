@@ -10,7 +10,7 @@
       <view class='nav-capsule' style='height: {{height*2 + 20}}px;' wx:if='{{navbarData.showCapsule}}'>
        <!-- //左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示
        //从分享进入小程序时 返回上一级按钮不应该存在 -->
-       <view bindtap='_navback' wx:if='{{!share}}'>
+       <view  bindtap='bindViewTab' wx:if='{{!share}}'>
         <image src='/images/back.png' mode='aspectFill' class='back'></image>
        </view>
        <!-- <view class='navbar-v-line' wx:if='{{!share}}'></view>
@@ -31,12 +31,14 @@
 <view class='page-item'>
            <view  class="item" bindtap="how_find">
               <!-- <text>第一个item1</text> -->
+              <image class="left" src="/images/question.png"></image> 
               如何找到小程序？
             </view>
 
             <view class="divLine"></view>
 
             <view  class="item" bindtap="how_login">
+            <image class="left" src="/images/question.png"></image> 
               <!-- <text>第二个item2</text> -->
              如何登录小程序?
             </view>
@@ -45,6 +47,7 @@
 
             <view  class="item" bindtap="how_delete">
               <!-- <text>第三个item3</text> -->
+              <image class="left" src="/images/question.png"></image> 
               如何删除小程序？
             </view>
 

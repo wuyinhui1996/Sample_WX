@@ -52,17 +52,30 @@ Page({
   },
 
   question: function () {
-    console.log("这是question");
+    // console.log("这是question");
+
+    wx.navigateTo({    //保留当前页面，跳转到应用内的某个页面（最多打开5个页面，之后按钮就没有响应的）
+      url: "/pages/question/question"
+    })
 
   },
 
   feedback: function () {
-    console.log("这是feedback");
+    // console.log("这是feedback");
+
+    wx.navigateTo({    //保留当前页面，跳转到应用内的某个页面（最多打开5个页面，之后按钮就没有响应的）
+      url: "/pages/feedback/feedback"
+    })
+
 
   },
 
   about_us: function () {
-    console.log("这是about_us");
+    // console.log("这是about_us");
+
+    wx.navigateTo({    //保留当前页面，跳转到应用内的某个页面（最多打开5个页面，之后按钮就没有响应的）
+      url: "/pages/about_us/about_us"
+    })
 
   },
   
@@ -124,5 +137,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  bindViewTab: function () {
+    wx.switchTab({    //跳转到tabBar页面，并关闭其他所有tabBar页面
+      url: "/pages/list/list"
+    })
   }
 })

@@ -1,5 +1,20 @@
 Page({
   data: {
+    indicatorDots: false,
+
+    autoplay: false,
+
+    interval: 5000,
+
+    duration: 1000,
+
+    proList: null,
+
+    userName: '滕翠利',
+
+    account: '13985',
+
+
 
     height: '',
     //默认值  默认显示左上角
@@ -34,52 +49,144 @@ Page({
     })
   },
   bindGetUserInfo(e) {
+    var userName = this.data.userName
+  
+
+    var account = this.data.account;
+
+    // mobile
+
+    if (userName == "" || account == "") {
+
+      wx.showModal({
+
+        title: '提示',
+
+        content: '请输入完整信息！',
+
+        success: function (res) {
+
+          if (res.confirm) {
+
+            console.log('用户点击确定')
+
+          }
+
+        }
+
+      })
+
+    } else {
+
+      console.log(this.data.userName)
+      console.log(this.data.account);
+
+      
+        wx.reLaunch({     //跳转至指定页面并关闭其他打开的所有页面（这个最好用在返回至首页的的时候）
+
+          url: '/pages/list/list'
+
+        })
+    
+
+      // detail
+
+    }
     console.log(e.detail.userInfo)
+    // this.setData({
+    //   //更新页面input框显示
+    //   userName: ''
+    // })
+
+  },
+  
+
+
+
+  // 判定输入为非空字符
+
+  formSubmit: function (e) {
+
+    var userName = e.detail.value.userName;
+
+    var account = e.detail.value.account;
+
+    // mobile
+
+    if (userName == "" || account == "") {
+
+      wx.showModal({
+
+        title: '提示',
+
+        content: '请输入完整信息！',
+
+        success: function (res) {
+
+          if (res.confirm) {
+
+            console.log('用户点击确定')
+
+          }
+
+        }
+
+      })
+
+    } else {
+
+      console.log(e.detail.value)
+
+      // detail
+
+    }
+
   },
 
-  formSubmit:function(e){
-    wx.request({
-      url: 'app.globalData.url.login',
-      data: {
-        username:e.detail.username,
-        ID:e.detail.no
-      },
-      header:{
-        'content-type':'application/json'
-      },
-      success:function(res){
-        console.log(res.data);
-        if(res.statusCode == 200){
-          //访问正常
-          if(res.data.error == true){
-            wx.showToast({
-              title:res.data.msg,
-              icon:'none',
-              duration:2000,
-            })
-          }else{
-            //缓存
-            wx.setStorage({
-              key: 'student',
-              data: 'res.data.student',
-            });
-            wx.showToast({
-              title: '登录成功',
-              icon:'success',
-              duration:2000,
-              success:function(){
-                setTimeout(function(){
-                  wx.switchTab({
-                    url: '../list/list',
-                  })
-                },2000)
-              }
-            })
-          }
-        }
-      }
-    })
-  }, 
+
+
+
+  // 卡号部分
+
+  inputAccountNum: function (e) {
+
+    let accountNumber = e.detail.value
+
+    if (accountNumber.length === 5) {
+
+      let checkedNum = this.checkAccountNum(accountNumber)
+
+    }
+
+  },
+
+  checkAccountNum: function (accountNumber) {
+
+    let str = /^1\d{10}$/
+
+    if (str.test(accountNumber)) {
+
+      return true
+
+    } else {
+
+      wx.showToast({
+
+        title: '就诊卡号不正确',
+
+        image: '/images/fail.png'
+
+      })
+
+      return false
+
+    }
+
+  },
+
+
+  
+
   properties: {
     navbarData: {   //navbarData   由父页面传递的数据，变量名字自命名
       type: Object,
@@ -110,4 +217,13 @@ Page({
     //   })
     // }
   // },
+
+
+  onShareAppMessage: function () {
+
+  },
+
+
+
+
 })

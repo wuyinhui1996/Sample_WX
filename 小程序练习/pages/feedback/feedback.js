@@ -162,41 +162,41 @@ Page({
       title: '加载中……',
       mask: true
     })
-    wx.request({
-      url: getApp().appData.host + "Suggest", //仅为示例，并非真实的接口地址
-      data: {
-        "intro": "[小程序]" + that.data.feed,
-        "mod": that.data.index + 3,
-        "token": getApp().appData.userInfo.token
-      },
-      header: {
-        'content-type': 'application/json', // 默认值
-      },
-      method: 'POST',
-      success: function (res) {
-        console.log("修改默认", res.data)
-        //请求成功
-        if (res.data.state == 1) {
+    // wx.request({
+    //   url: getApp().appData.host + "Suggest", //仅为示例，并非真实的接口地址
+    //   data: {
+    //     "intro": "[小程序]" + that.data.feed,
+    //     "mod": that.data.index + 3,
+    //     "token": getApp().appData.userInfo.token
+    //   },
+    //   header: {
+    //     'content-type': 'application/json', // 默认值
+    //   },
+    //   method: 'POST',
+    //   success: function (res) {
+    //     console.log("修改默认", res.data)
+    //     //请求成功
+    //     if (res.data.state == 1) {
           wx.hideLoading()
           setTimeout(function () {
             wx.showToast({
               title: '反馈成功',
             })
           }, 500)
-          wx.navigateBack({
-            delta: 1
-          })
-        } else {//请求失败      
-          wx.hideLoading()
-        }
-      },
-      fail: function (res) {
-        wx.hideLoading()
-      },
-      complete: function () {
-        wx.stopPullDownRefresh();
-      }
-    })
+    //       wx.navigateBack({
+    //         delta: 1
+    //       })
+    //     } else {//请求失败      
+    //       wx.hideLoading()
+    //     }
+    //   },
+    //   fail: function (res) {
+    //     wx.hideLoading()
+    //   },
+    //   complete: function () {
+    //     wx.stopPullDownRefresh();
+    //   }
+    // })
   },
 
   feedInput: function (e) {
@@ -222,6 +222,14 @@ Page({
         classifyList: classifyList
       })
     }
+  },
+  onShareAppMessage: function () {
+
+  },
+  bindViewTab: function () {
+    wx.switchTab({    //跳转到tabBar页面，并关闭其他所有tabBar页面
+      url: "/pages/help/help"
+    })
   }
 });
 

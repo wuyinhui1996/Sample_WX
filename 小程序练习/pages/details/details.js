@@ -42,7 +42,189 @@ Page({
 
 
     toView: 'red',
-    scrollTop: 200
+    scrollTop: 200,
+
+
+
+    "item1": [
+      {
+        "Measured_ML": "10.8",
+        "Measured_L": "0.834",
+        "Pred_ML": "32.3",
+        "Pred_L": "2.487",
+        "Pred_Percent": "34",
+        "parameterName": "峰值摄氧量（Peak V.O2）"
+      },
+      {
+        "Measured_ML": "7.8",
+        "Measured_L": "0.602",
+        "Pred_ML": "17.8",
+        "Pred_L": "1.373",
+        "Pred_Percent": "44",
+        "parameterName": "无氧阈（AT）"
+      }
+    ],
+    "item2": [
+      {
+        "id": "105",
+        "parameterId": "3",
+        "parameterName": "峰值负荷功率（Peak\nLoading,/W）",
+        "measured": "78.5",
+        "pred": "209",
+        "predPercent": "38",
+        "resting": null,
+        "peak": null,
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      },
+      {
+        "id": "106",
+        "parameterId": "4",
+        "parameterName": "峰值氧脉搏(Peak O2\npulse,mL/beat)",
+        "measured": "5.92",
+        "pred": "14",
+        "predPercent": "42",
+        "resting": null,
+        "peak": null,
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      },
+      {
+        "id": "107",
+        "parameterId": "5",
+        "parameterName": "峰值心排量（Peak\nCO,L/min）",
+        "measured": "5.56",
+        "pred": "17",
+        "predPercent": "34",
+        "resting": null,
+        "peak": null,
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      },
+      {
+        "id": "108",
+        "parameterId": "6",
+        "parameterName": "摄氧通气效率峰值平台\r\n（OUEP）",
+        "measured": "30.25",
+        "pred": "40",
+        "predPercent": "75",
+        "resting": null,
+        "peak": null,
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      },
+      {
+        "id": "109",
+        "parameterId": "7",
+        "parameterName": "二氧化碳排出通气效率最低\r\n值（lowest VE/VCO2）",
+        "measured": "35.93",
+        "pred": "26",
+        "predPercent": "137",
+        "resting": null,
+        "peak": null,
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      },
+      {
+        "id": "110",
+        "parameterId": "8",
+        "parameterName": "二氧化碳排出通气斜率\n（VE/VCO2 slope）",
+        "measured": "37.54",
+        "pred": "26",
+        "predPercent": "145",
+        "resting": null,
+        "peak": null,
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      }
+    ],
+    "item3": [
+      {
+        "id": "111",
+        "parameterId": "9",
+        "parameterName": "潮气量（VT,L）",
+        "measured": null,
+        "pred": null,
+        "predPercent": null,
+        "resting": "0.563",
+        "peak": "1.390",
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      },
+      {
+        "id": "112",
+        "parameterId": "10",
+        "parameterName": "分钟通气量\r\n（VE,L/min）",
+        "measured": null,
+        "pred": null,
+        "predPercent": null,
+        "resting": "10.67",
+        "peak": "37.16",
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      },
+      {
+        "id": "113",
+        "parameterId": "11",
+        "parameterName": "呼吸频率\n（f,min-1）",
+        "measured": null,
+        "pred": null,
+        "predPercent": null,
+        "resting": "19",
+        "peak": "27",
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      },
+      {
+        "id": "114",
+        "parameterId": "12",
+        "parameterName": "心率\n(HR,beat/min)",
+        "measured": null,
+        "pred": null,
+        "predPercent": null,
+        "resting": "82",
+        "peak": "141",
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      },
+      {
+        "id": "115",
+        "parameterId": "13",
+        "parameterName": "动脉收缩压\r\n（SBP,mmHg）",
+        "measured": null,
+        "pred": null,
+        "predPercent": null,
+        "resting": "98",
+        "peak": "124",
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      },
+      {
+        "id": "116",
+        "parameterId": "14",
+        "parameterName": "动脉舒张压\r\n（DBP,mmHg）",
+        "measured": null,
+        "pred": null,
+        "predPercent": null,
+        "resting": "68",
+        "peak": "79",
+        "operationTime": null,
+        "operationBy": null,
+        "listId": "13985"
+      }
+
+    ]
   
 
   },
@@ -64,20 +246,9 @@ Page({
       url: '../logs/logs'
     })
   },
+
+
   onLoad: function () {
-
-
-    // const http = require('../../utils/http.js')//引入http.js文件
-    // var params = { start: 1, count: 4 }; //参数
-    // http.post("http://health.ia.ac.cn:5007/checklistBicycleData/getChecklistBicycleDataByAt?listId=13985", { start: 1, count: 4 }, function (res) {
-    //   console.log("返回结果=" + JSON.stringify(res.data));
-    // }, function (e) {
-    //   console.log("返回error结果=" + JSON.stringify(e));
-    // });
-    
-
-
-
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -102,8 +273,106 @@ Page({
             hasUserInfo: true
           })
         }
+      });
+
+       var self = this;
+      wx.request({
+        url: "http://health.ia.ac.cn:5007/checklist/getChecklistByListId?listId=13985",
+        method: "POST",
+        data: {
+          LIST_ID: '',
+          INSTRUMENTS_ID: '',
+          PATIENT_NAME: '',
+          CHECK_DATE: '',
+          INPATIENT_AREA: '',
+          BIRTHDAY: '',
+          AGE: '',
+          INPATIENT_ID: '',
+          PATIENT_SEX: '',
+          START_TIME: '',
+          HEIGHT: '',
+          DURATION: '',
+          WEIGHT: '',
+          PROTOCOL: '',
+          BMI: '',
+          DIAGNOSIS: '',
+          RS: '',
+          HIE:'',
+          ECGCV:'',
+          ERRV:'',
+          RESTING_PFT:'',
+          OPE_DOCTOR:'',
+          READ_DOCTOR:'',
+          CHECK_DOCTOR:'',
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+
+        success: function (res) {
+          console.log(res.data);
+          self.setData({
+            LIST_ID: res.data.data.LIST_ID,
+            INSTRUMENTS_ID: res.data.data.INSTRUMENTS_ID,
+            PATIENT_NAME: res.data.data.PATIENT_NAME,
+            CHECK_DATE: res.data.data.CHECK_DATE,
+           
+            INPATIENT_AREA: res.data.data.INPATIENT_AREA,
+            BIRTHDAY: res.data.data.BIRTHDAY,
+            AGE: res.data.data.AGE,
+            INPATIENT_ID: res.data.data.INPATIENT_ID,
+            PATIENT_SEX: res.data.data.PATIENT_SEX,
+            START_TIME: res.data.data.START_TIME,
+            HEIGHT: res.data.data.HEIGHT,
+            DURATION: res.data.data.DURATION,
+            WEIGHT: res.data.data.WEIGHT,
+            PROTOCOL: res.data.data.PROTOCOL,
+            BMI: res.data.data.BMI,
+            DIAGNOSIS: res.data.data.DIAGNOSIS,
+            RS: res.data.data.RS,
+            HIE: res.data.data.HIE,
+            ECGCV: res.data.data.ECGCV,
+            ERRV: res.data.data.ERRV,
+            RESTING_PFT: res.data.data.RESTING_PFT,
+            OPE_DOCTOR: res.data.data.OPE_DOCTOR,
+            READ_DOCTOR: res.data.data.READ_DOCTOR,
+            CHECK_DOCTOR: res.data.data.CHECK_DOCTOR,
+
+          })
+        },
+        fail: function (err) { }
       })
     }
+
+
+
+    // var self = this;
+
+    wx.request({
+      url: "http://health.ia.ac.cn:5007/checklistParameters/getChecklistParametersByListId?listId=13985",
+      method: "POST",
+      data: {
+
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+
+      success: function (res) {
+
+        console.log(res.data);
+
+
+
+        self.setData({
+          item1: res.data.item1,
+          item2: res.data.item2,
+          item3: res.data.item3,
+
+        })
+      },
+      fail: function (err) { }
+    })
 
    
     
@@ -137,18 +406,18 @@ Page({
       height: app.globalData.height
     })
   },
-  methods: {
-    // 返回上一页面
-    _navback() {
-      wx.navigateBack()
-    },
+  // methods: {
+  //   // 返回上一页面
+  //   _navback() {
+  //     wx.navigateBack()
+  //   },
     // //返回到首页
     // _backhome() {
     //   wx.switchTab({
     //     url: '/pages/list/list',
     //   })
     // }
-  },
+  // },
 
 
   tap_ch: function (e) {
@@ -211,6 +480,8 @@ Page({
     this.data.mark = this.data.newmark;
 
   },
+
+  
   tap_end: function (e) {
     if (this.data.staus == 1 && this.data.startmark < this.data.newmark) {
       if (Math.abs(this.data.newmark - this.data.startmark) < (this.data.windowWidth * 0.2)) {
@@ -226,9 +497,9 @@ Page({
       }
     } else {
       if (Math.abs(this.data.newmark - this.data.startmark) < (this.data.windowWidth * 0.2)) {
-        this.setData({
-          translate: 'transform: translateX(' + this.data.windowWidth * 0.75 + 'px)'
-        })
+        // this.setData({
+        //   translate: 'transform: translateX(' + this.data.windowWidth * 0.75 + 'px)'
+        // })
         this.data.staus = 2;
       } else {
         this.setData({
@@ -243,15 +514,6 @@ Page({
   },
  CEPT_Report:function(){
     var self = this;
-    
-  //  this.setData({
-  //   //  motto:"你好世界",
-  //   text:"这是CEPT"
-     
-  //  }) 
-  //   //console.log("这是CEPT Report");
-
-
    wx.request({
      url: "http://health.ia.ac.cn:5007/checklist/getChecklistByListId?listId=13985",
      method: "POST",
@@ -273,22 +535,14 @@ Page({
        BMI:'',
        DIAGNOSIS:'',
        RS:'',
-
-
-    
-
      },
      header: {
        "Content-Type": "application/x-www-form-urlencoded"
      },
 
      success: function (res) {
-       
        console.log(res.data);
-
-     
-     
-      self.setData({
+       self.setData({
         LIST_ID: res.data.data.LIST_ID,
         INSTRUMENTS_ID: res.data.data.INSTRUMENTS_ID,
         PATIENT_NAME: res.data.data.PATIENT_NAME,
@@ -308,55 +562,14 @@ Page({
         DIAGNOSIS: res.data.data.DIAGNOSIS,
         RS: res.data.data.RS
       
-      })
-
-
-
-
-      //  wx.showToast({
-      //    title: '成功！',
-      //    icon: 'success',
-      //    duration: 2000
-      //  })
-       
+      })       
      },
      fail:function(err){}
-    
-
-
    })
    
  },
 
-
-     
-    
-     
-
- 
-  
-
-
-
- 
-  // CEPT: function (options) {
-
-  //   console.log("判断是否滑动" + util.tap_start(s));
-  //   // var that =  this;
-  //   // that.tap_start();
-
-  // },
-  // queryCartList: function () {
-  //   console.log('ok')
-  // }
-
-  AT_Report: function () {
-    // this.setData({
-    //   text:"这是AT"
-    // })
-    //  console.log("这是AT Report");
-
-    
+  AT_Report: function () { 
     var self = this;
     wx.request({
       url: "http://health.ia.ac.cn:5007/checklistBicycleData/getChecklistBicycleDataByAt?listId=13985",
@@ -485,6 +698,17 @@ Page({
       fail: function (err) { }
     })
 
+  },
+  onShareAppMessage: function () {
+
+  },
+
+
+
+  bindViewTab:function(){
+    wx.switchTab({    //跳转到tabBar页面，并关闭其他所有tabBar页面
+      url: "/pages/list/list"
+    })
   }
 
 

@@ -26,8 +26,8 @@ min-height: 20000rpx;
   padding:20rpx;  
 }  
 .left{  
-  width: 100rpx;  
-  height:100rpx;  
+  width: 80rpx;  
+  height:80rpx;  
 }  
 .right{  
   width: 590rpx;  
@@ -43,7 +43,7 @@ min-height: 20000rpx;
   width: 310rpx;  
 }  
 .name{  
-  font-size: 40rpx;  
+  font-size: 37rpx;  
   color: #000;  
 }  
 .phone{  

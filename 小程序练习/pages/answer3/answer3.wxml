@@ -10,7 +10,7 @@
       <view class='nav-capsule' style='height: {{height*2 + 20}}px;' wx:if='{{navbarData.showCapsule}}'>
        <!-- //左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示
        //从分享进入小程序时 返回上一级按钮不应该存在 -->
-       <view bindtap='_navback' wx:if='{{!share}}'>
+       <view bindtap='bindViewTab' wx:if='{{!share}}'>
         <image src='/images/back.png' mode='aspectFill' class='back'></image>
        </view>
        <!-- <view class='navbar-v-line' wx:if='{{!share}}'></view>
@@ -49,7 +49,10 @@
             </view>
 
             <view class="divLine"></view> -->
-            <view class='item'> 如何删除小程序？</view>
+            <view class='item'> 
+            <image class="left" src="/images/question.png"></image> 
+            如何删除小程序？
+            </view>
             <view class="divLine"></view>
             <view class='page-text'>
               <text>  　在小程序页面内，用户可通过左划删除小程序，删除使用记录，同时，用户的小程序数据也将被一并删除。

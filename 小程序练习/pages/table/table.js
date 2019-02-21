@@ -268,24 +268,11 @@ Page({
   onLoad: function () {
     var self = this;
 
-    //  this.setData({
-    //   //  motto:"你好世界",
-    //   text:"这是CEPT"
-
-    //  }) 
-    //   //console.log("这是CEPT Report");
-
-
     wx.request({
       url: "http://health.ia.ac.cn:5007/checklistParameters/getChecklistParametersByListId?listId=13985",
       method: "POST",
       data: {
-       
-
         
-
-
-
       },
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
@@ -301,42 +288,10 @@ Page({
            item1:res.data.item1,
            item2: res.data.item2,
           item3: res.data.item3,
-         
-          // LIST_ID: res.data.data.LIST_ID,
-          // INSTRUMENTS_ID: res.data.data.INSTRUMENTS_ID,
-          // PATIENT_NAME: res.data.data.PATIENT_NAME,
-          // CHECK_DATE: res.data.data.CHECK_DATE,
-          // CHECK_DATE: res.data.data.CHECK_DATE,
-          // INPATIENT_AREA: res.data.data.INPATIENT_AREA,
-          // BIRTHDAY: res.data.data.BIRTHDAY,
-          // AGE: res.data.data.AGE,
-          // INPATIENT_ID: res.data.data.INPATIENT_ID,
-          // PATIENT_SEX: res.data.data.PATIENT_SEX,
-          // START_TIME: res.data.data.START_TIME,
-          // HEIGHT: res.data.data.HEIGHT,
-          // DURATION: res.data.data.DURATION,
-          // WEIGHT: res.data.data.WEIGHT,
-          // PROTOCOL: res.data.data.PROTOCOL,
-          // BMI: res.data.data.BMI,
-          // DIAGNOSIS: res.data.data.DIAGNOSIS,
-          // RS: res.data.data.RS
 
         })
-
-
-
-
-        //  wx.showToast({
-        //    title: '成功！',
-        //    icon: 'success',
-        //    duration: 2000
-        //  })
-
       },
       fail: function (err) { }
-
-
-
     })
 
   },

@@ -111,7 +111,7 @@
   margin-left: 8px;
   margin-right: 8px;
  height: 100%;
- margin-top: 70px;
+ /* margin-top: 70px; */
   /* display: flex; 
   align-items: center; */
 }
@@ -176,8 +176,8 @@ view{
   line-height: 57rpx;
 }
 .classify-btn.active{
-  border: 1rpx solid #c9151e;
-  color: #c9151e;
+  border: 1rpx solid rgb(19, 133, 19);
+  color: rgb(19, 133, 19);
 }
 .feedback-text{
   width: 100%;
@@ -194,7 +194,7 @@ view{
 .feedback-btn{
   width: 376rpx;
 	height: 77rpx;
-	background-color: #c9151e;
+	background-color:rgb(19, 133, 19);
   font-size: 29rpx;
   text-align: center;
   color: #ffffff;

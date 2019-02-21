@@ -1,37 +1,41 @@
 {
   "pages":[
-    "pages/table/table",
-    "pages/details/details",
-    "pages/list/list",
     "pages/login/login",
+    "pages/details/details",
+    
+    "pages/list/list",
+    "pages/help/help",
     
     
-    
-    
+   
     "pages/feedback/feedback",
+    "pages/about_us/about_us",
+   
     "pages/answer3/answer3",
     "pages/answer2/answer2",
     "pages/answer1/answer1",
-    
-   
-    
     "pages/question/question",
-    "pages/help/help",
+    
+
     
   
-   
-    
-   
-    "pages/about_us/about_us",
     
     
-               
+  
     
-   
-                        
+    "pages/table/table",
+    
+     
+  
+    
+    
+     
     
    
  
+    
+    
+               
     
     
     "pages/index/index",

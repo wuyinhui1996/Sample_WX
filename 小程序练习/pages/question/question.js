@@ -52,17 +52,26 @@ Page({
   },
 
   how_find: function () {
-    console.log("这是如何找到小程序");
+    // console.log("这是如何找到小程序");
+    wx.navigateTo({    //保留当前页面，跳转到应用内的某个页面（最多打开5个页面，之后按钮就没有响应的）
+      url: "/pages/answer1/answer1"
+    })
 
   },
 
   how_login: function () {
-    console.log("这是如何登录小程序");
+    // console.log("这是如何登录小程序");
+    wx.navigateTo({    //保留当前页面，跳转到应用内的某个页面（最多打开5个页面，之后按钮就没有响应的）
+      url: "/pages/answer2/answer2"
+    })
 
   },
 
   how_delete: function () {
-    console.log("这是如何删除小程序");
+    // console.log("这是如何删除小程序");
+    wx.navigateTo({    //保留当前页面，跳转到应用内的某个页面（最多打开5个页面，之后按钮就没有响应的）
+      url: "/pages/answer3/answer3"
+    })
 
   },
 
@@ -124,5 +133,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  bindViewTab: function () {
+    wx.switchTab({    //跳转到tabBar页面，并关闭其他所有tabBar页面
+      url: "/pages/help/help"
+    })
   }
 })

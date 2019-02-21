@@ -39,11 +39,11 @@
   <form bindsubmit='formSubmit' style=' margin-top: 20px'>
     <view class='section'>
       <text>姓名：</text>
-      <input type='text' placeholder='请输入姓名' name='userName' ></input>
+      <input type='text' placeholder='请输入姓名' name='userName' bindinput ="userNameInput"  value='{{userName}}'>{{userName}}</input>
     </view>
-    <view class='section'>
-      <text style='align-items: center'>卡号：</text>
-       <input style='justify-content:center' type='number' placeholder='请输入就诊卡号' name='no' ></input>
+    <view class='section' >
+      <text style='align -items: center' >卡号：</text>
+       <input style='justify-content:center' maxlength="5" type='number' placeholder='请输入就诊卡号' name='account' bindinput="inputAccountNum" bindinput="accountInput" value='{{account}}'></input>
     </view>
     <view class='button'>
       <!-- <button style='width:200px; height:40px;  display: flex;justify-content: center;align-items: center;' type='primary' form-type='sumbit'>登录</button> -->
@@ -52,7 +52,7 @@
          wx:if="{{canIUse}}"
          open-type="getUserInfo"
          bindgetuserinfo="bindGetUserInfo"
-         style='width:200px; height:40px;  display: flex;justify-content: center;align-items: center;' type='primary' form-type='sumbit'
+         style='width:200px; height:40px;  display: flex;justify-content: center;align-items: center;' type='primary' form-type='sumbit'  bindtap='bindViewTab'
       >
       登录
       </button>

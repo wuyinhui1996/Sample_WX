@@ -30,8 +30,8 @@
 
 
 <view class="container list-container"> 
-    <view class="list-item" wx:for="{{contactList}}"> 
-      <image class="left"    src="/images/a.png"></image> 
+    <view class="list-item" wx:for="{{contactList}}" bindtap='bindViewTab'> 
+      <image class="left"    src="/images/report.png"></image> 
       <view class="right"> 
         <view class="title"> 
           <view class="name">{{item.name}}</view> 

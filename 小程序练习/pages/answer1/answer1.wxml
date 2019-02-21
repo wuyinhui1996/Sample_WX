@@ -10,7 +10,7 @@
       <view class='nav-capsule' style='height: {{height*2 + 20}}px;' wx:if='{{navbarData.showCapsule}}'>
        <!-- //左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示
        //从分享进入小程序时 返回上一级按钮不应该存在 -->
-       <view bindtap='_navback' wx:if='{{!share}}'>
+       <view bindtap='bindViewTab' wx:if='{{!share}}'>
         <image src='/images/back.png' mode='aspectFill' class='back'></image>
        </view>
        <!-- <view class='navbar-v-line' wx:if='{{!share}}'></view>
@@ -29,27 +29,11 @@
 
 
 <view class='page-item'>
-           <!-- <view  class="item" bindtap="question"> -->
-              <!-- <text>第一个item1</text> -->
-              <!-- 常见问题
+       
+            <view class='item'> 
+            <image class="left" src="/images/question.png"></image> 
+            如何找到小程序？
             </view>
-
-            <view class="divLine"></view>
-
-            <view  class="item" bindtap="feedback"> -->
-              <!-- <text>第二个item2</text> -->
-              <!-- 反馈
-            </view>
-
-            <view class="divLine"></view>
-
-            <view  class="item" bindtap="about_us"> -->
-              <!-- <text>第三个item3</text> -->
-              <!-- 关于我们
-            </view>
-
-            <view class="divLine"></view> -->
-            <view class='item'> 如何找到小程序？</view>
             <view class="divLine"></view>
             <view class='page-text'>
               <text>  小程序页面内会罗列所有用户打开过的小程序，有搜索框可供查找，并添加新的小程序。但该页面不提供小程序分类、排行等入口。目前已知的打开新小程序的方式有：好友分享、扫二维码、用户手动查找三种方式。\n  此外，Android版微信支持将小程序添加至桌面。iOS版微信仅支持将小程序置顶于聊天界面。用户在聊天界面至多置顶一个小程序。

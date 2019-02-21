@@ -29,135 +29,87 @@
 
 
 <view class='page-item'>
-            <view class='page-text'>
+  <view class='page-text'>
 
   
-               <view class="table1">
-  <!-- <view class="tr tr_title">
-    上午8:30-11:45
-  </view> -->
-  <view class="tr bg-w">
-    <view class="th1 ">
-      <view class='th1_ch'>指标</view>
-      <view class='th1_en'>（Parameters）</view>          
-    </view>
+    <view class="table1">
+
+      <view class="tr bg-w">
+        <view class="th1 ">
+          <view class='th1_ch'>指标</view>
+          <view class='th1_en'>（Parameters）</view>          
+        </view>
   
-      <!-- <view class="th ">
-        <view class='th_ch'>峰值摄氧量</view>
-        <view class='th_en'>(Peak VO2)</view> 
-      </view>
-     <view class="th ">
-        <view class='th_ch'>无氧阀</view>
-        <view class='th_en'>（AT）</view> 
-      </view> -->
-      <block wx:for="{{item1}}" wx:key="this">
-        <view class='th'>{{item.parameterName}}</view>
-      </block>
-  </view>
-  <view class='tr'>
-   <!-- <view class='tr_title1'> -->
    
-    <view class="td ">
-      <view class='td_ch'>实测值</view>
-      <view class='td_en'>(Measured)</view> 
-    </view>
-    <view class="td ">
-      <view class="tdd2">(L/min)</view>
-      <view class="tdd2 border-none">(mL/min/kg)</view>
-    <!-- </view> -->
-    </view>
-    <view class="tdd1 ">
-      <view class='tdd1_row'>
         <block wx:for="{{item1}}" wx:key="this">
-           <view class='tdd1_row_num'>{{item.Measured_L}}</view>
+          <view class='th'>{{item.parameterName}}</view>
         </block>
-        <!-- <view class='tdd1_row_num'>0.834</view>
-         <view class='tdd1_row_num'>0.602</view> -->
       </view>
+      <view class='tr'>
+        <view class="td ">
+          <view class='td_ch'>实测值</view>
+          <view class='td_en'>(Measured)</view> 
+        </view>
+        <view class="td ">
+          <view class="tdd2">(L/min)</view>
+          <view class="tdd2 border-none">(mL/min/kg)</view>
+        </view>
+        <view class="tdd1 ">
+          <view class='tdd1_row'>
+            <block wx:for="{{item1}}" wx:key="this">
+             <view class='tdd1_row_num'>{{item.Measured_L}}</view>
+            </block>
+          </view>
     
-      <view class='tdd1_row'>
-       <block wx:for="{{item1}}" wx:key="this">
-           <view class='tdd1_row_num'>{{item.Measured_ML}}</view>
-        </block>
-        <!-- <view class='tdd1_row_num'>10.8</view>
-         <view class='tdd1_row_num'>7.8</view> -->
-      </view> 
-    </view>
-   
-    
-   
-  </view>
-
-
- <view class='tr'>
-    <view class="td  ">
-      <view class='td_ch'>预计值</view>
-      <view class='td_en'>（Pred.）</view> 
-    </view>
-    <view class="td ">
-      <view class="tdd2">(L/min)</view>
-      <view class="tdd2 border-none">(mL/min/kg)</view>
-    </view>
-     <view class="tdd1 ">
-      <view class='tdd1_row'>
-        <block wx:for="{{item1}}" wx:key="this">
-           <view class='tdd1_row_num'>{{item.Pred_L}}</view>
-        </block>
-        <!-- <view class='tdd1_row_num'>0.834</view>
-         <view class='tdd1_row_num'>0.602</view> -->
+          <view class='tdd1_row'>
+           <block wx:for="{{item1}}" wx:key="this">
+             <view class='tdd1_row_num'>{{item.Measured_ML}}</view>
+           </block>
+          </view> 
+        </view>  
       </view>
-    
-      <view class='tdd1_row'>
-       <block wx:for="{{item1}}" wx:key="this">
-           <view class='tdd1_row_num'>{{item.Pred_ML}}</view>
-        </block>
-        <!-- <view class='tdd1_row_num'>10.8</view>
-         <view class='tdd1_row_num'>7.8</view> -->
-      </view> 
-    </view>
-    
-  </view>
-
-  <view class='tr'>
-    <view class="td  ">
-      <view class='td_ch1'>百分预计值</view>
-      <!-- <view class='td_en'>（Pred.）</view>  -->
-    </view>
-    <view class="td ">
-      <view class="tdd">（%Pred.）</view>
-      
-    </view>
-    
-    <!-- <view class="td ">
-      <view class="tdd">34</view>
-   
-    </view>
-  
-    <view class="td ">
-      <view class="tdd">44</view>
-   
-    </view> -->
 
 
-    <view class="tdd1 ">
-      <view class='tdd1_row1'>
-        <block wx:for="{{item1}}" wx:key="this">
-           <view class='tdd1_row_num'>{{item.Pred_Percent}}</view>
-        </block>
-        <!-- <view class='tdd1_row_num'>0.834</view>
-         <view class='tdd1_row_num'>0.602</view> -->
+      <view class='tr'>
+        <view class="td  ">
+          <view class='td_ch'>预计值</view>
+          <view class='td_en'>（Pred.）</view> 
+        </view>
+        <view class="td ">
+          <view class="tdd2">(L/min)</view>
+          <view class="tdd2 border-none">(mL/min/kg)</view>
+        </view>
+        <view class="tdd1 ">
+          <view class='tdd1_row'>
+            <block wx:for="{{item1}}" wx:key="this">
+              <view class='tdd1_row_num'>{{item.Pred_L}}</view>
+            </block> 
+          </view>
+    
+          <view class='tdd1_row'>
+            <block wx:for="{{item1}}" wx:key="this">
+              <view class='tdd1_row_num'>{{item.Pred_ML}}</view>
+            </block>    
+          </view> 
+        </view>    
       </view>
-    
-    
+
+      <view class='tr'>
+        <view class="td  ">
+          <view class='td_ch1'>百分预计值</view>     
+        </view>
+        <view class="td ">
+          <view class="tdd">（%Pred.）</view>      
+        </view>
+        <view class="tdd1 ">
+          <view class='tdd1_row1'>
+            <block wx:for="{{item1}}" wx:key="this">
+              <view class='tdd1_row_num'>{{item.Pred_Percent}}</view>
+            </block>
+          </view>   
+        </view>
+      </view>
     </view>
-
-  </view>
- 
-</view>
-
-
-
-
 
 
   <view class="table2">
@@ -188,14 +140,8 @@
       <view class='th3'>{{item.measured}}</view>
       <view class='th4'>{{item.pred}}</view>
       <view class='th5'>{{item.predPercent}}</view>
-  </view>
-
-    
+  </view>    
 </view>
-
-
-
-
 
   <view class="table3">
   <view class="tr bg-w">
