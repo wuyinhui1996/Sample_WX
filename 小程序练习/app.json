@@ -1,10 +1,12 @@
 {
   "pages":[
-    "pages/help/help",
     "pages/details/details",
+    "pages/AT_scatter/AT_scatter",
+    "pages/help/help",
+    
     "pages/list/list",
     "pages/login/login",
-    "pages/AT_scatter/AT_scatter",
+  
    
     
   

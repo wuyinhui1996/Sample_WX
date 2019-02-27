@@ -312,6 +312,28 @@
          
            </view>
 
+
+<view class='container1'>
+  <view class='container_text'>
+    <text>FuWai Hospital</text>
+  </view>
+   <view class='container_item'>
+     <view>Name：{{PATIENT_NAME}} {{CHECK_DATE}}</view>
+     <view>Ram: Protocol： {{PROTOCOL}}W/min</view>
+     <view>Reason for Stopping：{{RS}}</view>
+     <view>Reviewed By ：{{READ_DOCTOR}}</view>
+   </view>
+   <view class='container_text'>
+   <text>Sun's New 9-Panel Report
+   CardioPulmonary Exercise Testing（CPET）
+  Chinese National Center of Cardiovascular Diseases
+  Fuwai-Harbor-UCLA international CPET Laboratory
+  version 2011/1/18（Xingguo Sun，MD at LABiomed at Harbor-UCLA MC）</text>
+   </view>
+</view>
+<view class="container">
+    <ec-canvas id="mychart-dom-scatter" canvas-id="mychart-scatter" ec="{{ ec }}"></ec-canvas>
+</view>
 <!-- <view class='bindScrollOver'>{{bindScrollOver}}</view> -->
 </scroll-view>
            

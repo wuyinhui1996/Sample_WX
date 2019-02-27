@@ -10,49 +10,6 @@ function initChart(canvas, width, height) {
   });
   canvas.setChart(chart);
 
-  // var data = [];
-  // var data2 = [];
-
-  // for (var i = 0; i < 10; i++) {
-  //   data.push(
-  //     [
-  //       Math.round(Math.random() * 100),
-  //       Math.round(Math.random() * 100),
-  //       Math.round(Math.random() * 40)
-  //     ]
-  //   );
-  //   data2.push(
-  //     [
-  //       Math.round(Math.random() * 100),
-  //       Math.round(Math.random() * 100),
-  //       Math.round(Math.random() * 100)
-  //     ]
-  //   );
-  // }
-
-  // var axisCommon = {
-  //   axisLabel: {
-  //     textStyle: {
-  //       color: '#C8C8C8'
-  //     }
-  //   },
-  //   axisTick: {
-  //     lineStyle: {
-  //       color: '#fff'
-  //     }
-  //   },
-  //   axisLine: {
-  //     lineStyle: {
-  //       color: '#C8C8C8'
-  //     }
-  //   },
-  //   splitLine: {
-  //     lineStyle: {
-  //       color: '#C8C8C8',
-  //       type: 'solid'
-  //     }
-  //   }
-  // };
 
   var option = {
     xAxis: [{
