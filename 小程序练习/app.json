@@ -1,10 +1,15 @@
 {
   "pages":[
-    "pages/login/login",
-    "pages/details/details",
-    
-    "pages/list/list",
     "pages/help/help",
+    "pages/details/details",
+    "pages/list/list",
+    "pages/login/login",
+    "pages/AT_scatter/AT_scatter",
+   
+    
+  
+    
+    
     
     
    
@@ -17,11 +22,6 @@
     "pages/question/question",
     
 
-    
-  
-    
-    
-  
     
     "pages/table/table",
     

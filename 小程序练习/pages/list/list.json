@@ -1,6 +1,5 @@
 {
   "navigationBarTitleText":"心肺功能检测",
-  "usingComponents":{},
-  "enablePullDownRefresh": true
+  "usingComponents":{}
   
 }

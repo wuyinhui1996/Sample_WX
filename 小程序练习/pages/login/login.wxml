@@ -1,32 +1,11 @@
 <view class='bar' style='height:80px' >
   <view class='nav-wrap' style='height: {{height*2 + 24}}px;'>
-    <!-- // 导航栏 中间的标题 -->
-    <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view>
-    <!-- <view style='display: flex; justify-content: space-around;flex-direction: column '> -->
+    <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view> 
   </view>
   <view class='titlebar'>
-    <!-- // 导航栏  左上角的返回按钮 和home按钮
-      //  其中wx:if='{{navbarData.showCapsule}}' 是控制左上角按钮的显示隐藏，首页不显示 -->
-      <!-- <view class='nav-capsule' style='height: {{height*2 + 20}}px;' wx:if='{{navbarData.showCapsule}}'> -->
-       <!-- //左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示
-       //从分享进入小程序时 返回上一级按钮不应该存在 -->
-       <!-- <view bindtap='_navback' wx:if='{{!share}}'>
-        <image src='/images/back.png' mode='aspectFill' class='back'></image>
-       </view> -->
-       <!-- <view class='navbar-v-line' wx:if='{{!share}}'></view>
-       <view bindtap='tap_ch'>
-        <image src='/images/more.png' mode='aspectFill' class='more'></image>
-       </view> -->
-       
-     <!-- </view> -->
      <view class='home-page' mode='aspectFill' >登录</view>
   </view>
-      
-   <!-- </view> -->
-
 </view>
-
-
 
 
 <!-- 登录页 -->
@@ -46,23 +25,15 @@
        <input style='justify-content:center' maxlength="5" type='number' placeholder='请输入就诊卡号' name='account' bindinput="inputAccountNum" bindinput="accountInput" value='{{account}}'></input>
     </view>
     <view class='button'>
-      <!-- <button style='width:200px; height:40px;  display: flex;justify-content: center;align-items: center;' type='primary' form-type='sumbit'>登录</button> -->
-      <!-- 需要使用 button 来授权登录 -->
-     <button
-         wx:if="{{canIUse}}"
-         open-type="getUserInfo"
-         bindgetuserinfo="bindGetUserInfo"
-         style='width:200px; height:40px;  display: flex;justify-content: center;align-items: center;' type='primary' form-type='sumbit'  bindtap='bindViewTab'
-      >
+   
+     <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"
+         style='width:200px; height:40px;  display: flex;justify-content: center;align-items: center;' type='primary' form-type='sumbit'  bindtap='bindViewTab' >
       登录
       </button>
         <view wx:else>请升级微信版本</view>
-
       <button open-type='getUserInfo' bindgetuserinfo='handleLogin'></button>
 
-    </view>
-     
-    
+    </view>  
   </form>
 </view>
 

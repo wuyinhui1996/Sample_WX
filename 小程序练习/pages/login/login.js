@@ -10,9 +10,9 @@ Page({
 
     proList: null,
 
-    userName: '滕翠利',
+    userName: '',
 
-    account: '13985',
+    account: '',
 
 
 
